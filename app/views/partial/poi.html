@@ -1,0 +1,7 @@
+<div class="picture" >
+  <img style="{{crop}}" class="photo" ng-if="media != undefined" ng-Srcset="{{media.renditions.thumb.href}} {{media.renditions.thumb.width}}w,
+                      {{media.renditions.preview.href}} {{media.renditions.preview.width}}w,
+                      {{media.renditions.full.href}} {{media.renditions.full.width}}w,"
+       sizes="50vw" alt="demo image #1" />
+  <h3>Crop: {{title}}</h3>
+</div>

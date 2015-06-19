@@ -9,7 +9,7 @@
     <div class="picture">
       <img ng-Srcset="{{assets[0].story.media[0].renditions.thumb.href}} {{assets[0].story.media[0].renditions.thumb.width}}w,
                       {{assets[0].story.media[0].renditions.preview.href}} {{assets[0].story.media[0].renditions.preview.width}}w,
-                      {{assets[0].story.media[0].renditions.full.href}} {{assets[0].story.media[0].renditions.full.width}}w," 
+                      {{assets[0].story.media[0].renditions.full.href}} {{assets[0].story.media[0].renditions.full.width}}w,"
            sizes="50vw" alt="demo image #1" />
     </div>
     <p>Current Approach</p>
@@ -17,13 +17,7 @@
 
   <div id="example2">
     <h2>B</h2>
-    <div class="picture">
-      <img style="left: -94px;"
-           ng-Srcset="{{assets[0].story.media[0].renditions.thumb.href}} {{assets[0].story.media[0].renditions.thumb.width}}w,
-                      {{assets[0].story.media[0].renditions.preview.href}} {{assets[0].story.media[0].renditions.preview.width}}w,
-                      {{assets[0].story.media[0].renditions.full.href}} {{assets[0].story.media[0].renditions.full.width}}w," 
-           sizes="50vw" alt="demo image #1" />
-    </div>
+    <poi media="assets[0].story.media[0]"></poi>
     <p>Using POI</p>
   </div>
 </section>
