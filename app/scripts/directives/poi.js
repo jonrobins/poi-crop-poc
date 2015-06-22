@@ -28,8 +28,21 @@ angular.module('poiCropPocApp')
             var containerWidth = image[0].parentNode.clientWidth;
             var leftDistance = (imageWidth - containerWidth) * leftPercent;
 
+            var poiY = $scope.media.renditions.full.crops.POI.y;
+            var fullH = $scope.media.renditions.full.height;
+            var topPercent = poiY/fullH;
+            var imageHeight = image[0].clientHeight;
+            var containerHeight = image[0].parentNode.clientHeight;
+            var topDistance = (imageHeight - containerHeight) * topPercent;
+
+            var leftPos = Math.abs(leftDistance) * -1;
+            var topPos = Math.abs(topDistance) * -1;
+
+            console.log(Math.abs(leftPos+(imageWidth*leftPercent)-30));
+
             $scope.$apply(function(){
-              $scope.crop = "left: " + Math.abs(leftDistance) * -1 + "px";
+              $scope.crop = "left: " + leftPos + "px; top: " + topPos + "px";
+              $scope.poiTarget = "left: " + Math.abs(leftPos+(imageWidth*leftPercent)-15) + "px; top: " + Math.abs(topPos+(imageHeight*topPercent)-15) + "px";
               $scope.title = "New Title";
             });
           });
