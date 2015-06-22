@@ -24,8 +24,8 @@ angular.module('poiCropPocApp')
             var poiX = $scope.media.renditions.full.crops.POI.x;
             var fullW = $scope.media.renditions.full.width;
             var leftPercent = poiX/fullW;
-            var imageWidth = image[0].naturalWidth;
-            var containerWidth = image[0].width;
+            var imageWidth = image[0].clientWidth;
+            var containerWidth = image[0].parentNode.clientWidth;
             var leftDistance = (imageWidth - containerWidth) * leftPercent;
 
             $scope.$apply(function(){
